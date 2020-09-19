@@ -1,0 +1,79 @@
+@import "commons/variables";
+
+@mixin ModalTitle($source) {
+  background-image: url($source);
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: $mango;
+  padding: 8px;
+  width: auto;
+  height: 30%;
+  background-repeat: no-repeat;
+}
+
+@mixin itemSelected() {
+  background-color: $mango;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+}
+
+.ModalContainer {
+  color: black;
+  padding: 8px;
+  font-size: 14px;
+  height: 360px;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $mintCream;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $mango;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: bottom;
+  }
+}
+
+.PureHoneyContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.PureHoneyContainer li {
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding: 4px;
+}
+
+.PureHoneyContainer li:hover {
+  @include itemSelected();
+}
+
+.ModalTitleHoneyComb {
+  @include ModalTitle("../img/headersarangmadu.png");
+}
+
+.ModalTitleBeePollen {
+  @include ModalTitle("../img/headerbeepollen.png");
+}
+
+.ModalPureHoney {
+  display: flex;
+  flex-direction: row;
+  padding: 8px;
+}
+
+.ModalPureHoney nav {
+  margin-left: 8px;
+  margin-right: 36px;
+}

@@ -1,0 +1,132 @@
+@import "commons/variables";
+@import "commons/prefix";
+
+.navbar-app {
+  @include prefix(transition, 0.3s ease-in-out, webkit moz ms o);
+  height: 100px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+
+  &.scrolled {
+    background-color: white;
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  .li {
+    opacity: 0.3;
+
+    &.active {
+      color: $mango;
+      font-weight: 900;
+      opacity: 1;
+
+      &:hover {
+        color: $mango;
+      }
+    }
+
+    &:hover {
+      @include prefix(transform, scale(1.1), webkit moz ms o);
+      color: $cadmiumYellow;
+      opacity: 1;
+    }
+  }
+
+  ul.desktop,
+  ul.mobile {
+    @include prefix(transition, 0.3s ease-in-out, webkit moz ms o);
+
+    li {
+      cursor: pointer;
+      display: inline-block;
+      font-size: 18px;
+      height: 80px;
+      line-height: 65px;
+      margin-left: 30px;
+      list-style: none;
+    }
+  }
+
+  ul.desktop {
+    display: flex;
+    margin-bottom: 0;
+
+    li {
+      &:first-child {
+        margin-right: 18px;
+
+        img {
+          width: 55px;
+        }
+      }
+
+      &:not(:first-child) {
+        @extend .li;
+      }
+
+      &.burger-menu {
+        @include prefix(transform, rotate(0deg), webkit moz ms o);
+        cursor: pointer;
+        display: none;
+        margin-right: 20px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+        z-index: 5;
+
+        &.open {
+          span:nth-child(1) {
+            @include prefix(transform, rotate(-45deg), webkit moz ms o);
+            top: 32px;
+          }
+
+          span:nth-child(2) {
+            @include prefix(transform, translateX(50px), webkit moz ms o);
+            opacity: 0;
+          }
+
+          span:nth-child(3) {
+            @include prefix(transform, rotate(45deg), webkit moz ms o);
+            top: 32px;
+          }
+        }
+
+        span {
+          @include prefix(transform, rotate(0deg), webkit moz ms o);
+          @include prefix(transition, 0.25s ease-in-out, webkit moz ms o);
+          background: gray;
+          border-radius: 9px;
+          display: block;
+          height: 4px;
+          position: absolute;
+          opacity: 0.7;
+          right: 0;
+          width: 100%;
+
+          &:nth-child(1) {
+            top: 20px;
+          }
+
+          &:nth-child(2) {
+            top: 32px;
+          }
+
+          &:nth-child(3) {
+            top: 44px;
+          }
+        }
+      }
+    }
+  }
+
+  ul.mobile {
+    visibility: hidden;
+
+    li {
+      @extend .li;
+    }
+  }
+}

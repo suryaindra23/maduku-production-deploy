@@ -1,0 +1,42 @@
+@import "commons/variables";
+
+@mixin footerContent($align, $padding) {
+  padding: $padding;
+  font-size: 14px;
+  text-align: $align;
+}
+
+.Container {
+  background-color: $whiteDirty;
+}
+
+.Footer {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.Copyright {
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: gray;
+}
+
+.About {
+  @include footerContent(left, 16px);
+}
+
+.Socmed {
+  @include footerContent(center, 16px);
+  display: inline;
+}
+
+.Mainmenu {
+  @include footerContent(center, 16px);
+}
+
+.SocmedIcon {
+  @include footerContent(center, 8px);
+}
