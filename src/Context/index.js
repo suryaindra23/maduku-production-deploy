@@ -1,1 +1,0 @@
-export { NavbarContext } from "./NavbarContext"
