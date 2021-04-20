@@ -17,6 +17,18 @@ export default function Contact() {
         Dapatkan segera produk kami pada Online Shop berikut :
       </p>
       <div className="OnlineShop">
+      <div className="Icon">
+          <a
+            href="https://tokopedia.com/sarangmaduku"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>
+              <img src={tokped} alt="tokopedia" width="24" height="24" />
+              Tokopedia Malang
+            </p>
+          </a>
+        </div>
         <div className="Icon">
           <a
             href="https://tokopedia.com/sarangmadukusidoarjo"
@@ -50,18 +62,6 @@ export default function Contact() {
             <p>
               <img src={bukalapak} alt="Bukalapak" width="24" height="24" />
               Bukalapak
-            </p>
-          </a>
-        </div>
-        <div className="Icon">
-          <a
-            href="https://tokopedia.com/sarangmaduku"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p>
-              <img src={tokped} alt="tokopedia" width="24" height="24" />
-              Tokopedia Malang
             </p>
           </a>
         </div>
