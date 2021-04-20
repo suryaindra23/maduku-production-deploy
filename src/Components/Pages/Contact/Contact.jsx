@@ -25,7 +25,7 @@ export default function Contact() {
           >
             <p>
               <img src={tokped} alt="Tokopedia" width="24" height="24" />
-              Tokopedia
+              Tokopedia Sidoarjo
             </p>
           </a>
         </div>
@@ -61,7 +61,7 @@ export default function Contact() {
           >
             <p>
               <img src={tokped} alt="tokopedia" width="24" height="24" />
-              Bukalapak
+              Tokopedia Malang
             </p>
           </a>
         </div>
