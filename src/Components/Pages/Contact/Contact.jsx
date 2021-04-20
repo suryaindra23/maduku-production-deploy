@@ -19,24 +19,12 @@ export default function Contact() {
       <div className="OnlineShop">
         <div className="Icon">
           <a
-            href="https://tokopedia.link/q9zJNnZXi9"
+            href="https://tokopedia.com/sarangmadukusidoarjo"
             target="_blank"
             rel="noopener noreferrer"
           >
             <p>
               <img src={tokped} alt="Tokopedia" width="24" height="24" />
-              Tokopedia
-            </p>
-          </a>
-        </div>
-        <div className="Icon">
-          <a
-            href="https://www.tokopedia.com/sarangmadukusidoarjo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <p>
-              <img src={tokped} alt="Tokopedia Sidoarjo" width="24" height="24" />
               Tokopedia
             </p>
           </a>
