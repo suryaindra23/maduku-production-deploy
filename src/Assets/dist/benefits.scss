@@ -1,0 +1,21 @@
+@import "commons/variables";
+
+.BenefitContainer {
+  background-color: $mango;
+  color: white;
+  max-width: 100%;
+  padding: 8px;
+  position: relative;
+}
+
+.Item {
+  max-width: 100%;
+  padding: 24px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  border-radius: 50px;
+  border-style: dashed;
+  border: 10px dashed #eee;
+  margin: 24px;
+}

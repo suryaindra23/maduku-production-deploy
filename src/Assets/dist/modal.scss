@@ -1,0 +1,42 @@
+@import "commons/variables";
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.modal-main {
+  border-radius: 20px;
+  position: fixed;
+  background: white;
+  width: 65%;
+  height: 65%;
+  top: 50%;
+  left: 50%;
+  overflow: auto;
+  transform: translate(-50%, -50%);
+}
+
+.display-block {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}
+
+.modal-main button {
+  background-color: rgba($color: $whiteDirty, $alpha: 1);
+  color: $mango;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  position: absolute;
+  border-radius: 50%;
+  padding: 0;
+}

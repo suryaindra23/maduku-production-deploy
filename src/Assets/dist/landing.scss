@@ -1,0 +1,359 @@
+@import "commons/variables";
+@import "commons/template";
+@import "commons/prefix";
+
+.landing-app {
+  @include app;
+
+  // General style
+  .title {
+    color: $mango;
+    margin: 0 auto;
+    padding-top: 16px;
+    text-align: center;
+    width: 90%;
+
+    h1 {
+      border-bottom: 1px solid $mango;
+      line-height: 0.1em;
+
+      span {
+        background: white;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  .galeri-app,
+  .product-app,
+  .testimoni-app {
+    .container {
+      margin-top: 6em;
+    }
+  }
+
+  .image-gallery {
+    .image-gallery-slide img:focus {
+      outline: none;
+    }
+
+    button.image-gallery-icon {
+      color: $cadmiumYellow;
+
+      &:hover,
+      &:focus {
+        box-shadow: none;
+        outline-color: transparent;
+        color: $mango;
+      }
+
+      &:focus {
+        border: none;
+      }
+
+      svg {
+        @include prefix(transition, all 0.3s ease-in-out, webkit moz ms o);
+      }
+    }
+
+    .image-gallery-bullets button {
+      &.active {
+        background: $mango;
+      }
+
+      &:hover,
+      &:focus {
+        background: $cadmiumYellow;
+      }
+    }
+
+    .image-gallery-slides img {
+      border-radius: 20px;
+      object-fit: cover;
+    }
+
+    .image-gallery-thumbnails-wrapper button {
+      &.active {
+        border-color: $mango;
+      }
+
+      &:hover,
+      &:focus {
+        border-color: $cadmiumYellow;
+      }
+    }
+  }
+  // End of General
+
+  .home-app,
+  .product-app {
+    min-height: 100vh;
+  }
+
+  .home-app {
+    .content {
+      padding: 0 7vw;
+      position: absolute;
+      top: 3%;
+      left: 0;
+      right: 0;
+      z-index: 5;
+
+      h1 {
+        color: $mango;
+        margin-bottom: 0;
+        word-wrap: break-word;
+
+        br {
+          display: none;
+        }
+      }
+
+      h3 {
+        margin-top: 0;
+      }
+
+      p {
+        font-size: $fontMd;
+        text-align: justify;
+        width: 80%;
+      }
+
+      button {
+        background-color: $mango;
+        border-radius: 30px;
+        color: white;
+        width: 10em;
+      }
+    }
+
+    img {
+      height: 100vh;
+      object-position: 11em -6em;
+    }
+  }
+
+  .product-app {
+    background-color: $whiteDirty;
+    padding-bottom: 8em;
+    position: relative;
+    overflow: hidden;
+
+    .particle {
+      @include particle;
+    }
+
+    .jar-one {
+      @include jar-one;
+      left: -1em;
+      bottom: -1em;
+      z-index: 0;
+    }
+
+    .jar-two {
+      @include jar-two;
+      top: -1em;
+      right: -1em;
+      z-index: 0;
+    }
+
+    .jar-three {
+      @include jar-three;
+      bottom: 20%;
+      right: -1em;
+      z-index: 1;
+    }
+
+    .title {
+      h1 {
+        position: relative;
+        z-index: 3;
+
+        span {
+          background-color: $whiteDirty;
+        }
+      }
+    }
+
+    .container {
+      margin-top: 6em;
+
+      .card-app {
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+          0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        height: 230px;
+        margin: 64px 0;
+        overflow: hidden;
+
+        .img-box {
+          height: 100%;
+
+          &.prod-two img {
+            object-position: 0 -9em;
+          }
+
+          &.prod-three img {
+            object-position: 0 -0.2em;
+          }
+        }
+
+        h3 {
+          color: $mango;
+        }
+
+        p {
+          font-size: $fontMd;
+          text-align: justify;
+          margin: 0;
+          width: 90%;
+        }
+      }
+    }
+  }
+
+  .BenefitContainer,
+  .ContactContainer {
+    .title {
+      h1 {
+        border-color: $whiteDirty;
+        color: $whiteDirty;
+
+        span {
+          background-color: $mango;
+        }
+      }
+    }
+  }
+
+  .BenefitContainer .title {
+    margin-bottom: 40px;
+  }
+
+  .testimoni-app {
+    margin-top: 4em;
+    position: relative;
+    z-index: 3;
+
+    .overlay {
+      background-color: $mango;
+      height: 50%;
+      position: absolute;
+      width: 100%;
+      z-index: 0;
+    }
+
+    .title {
+      position: relative;
+      z-index: 2;
+
+      h1 {
+        border-color: white;
+        color: white;
+
+        span {
+          background-color: $mango;
+        }
+      }
+    }
+
+    .carousel-app {
+      background-color: white;
+      box-shadow: 0 5px 40px -10px rgba(0, 0, 0, 0.18),
+        0 4px 30px -20px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      display: flex;
+      padding: 40px;
+      position: relative;
+      width: 100%;
+
+      i.arrow {
+        @include prefix(transition, 0.3s ease-in-out, webkit moz ms o);
+        border-radius: 50%;
+        box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+          0 4px 15px 0 rgba(0, 0, 0, 0.15);
+        color: $cadmiumYellow;
+        cursor: pointer;
+        font-size: 40px;
+        height: 50px;
+        padding: 5px 0;
+        position: absolute;
+        top: 45%;
+        width: 50px;
+
+        &.fa-chevron-left {
+          left: 160px;
+
+          &::before {
+            padding-left: 10px;
+          }
+        }
+
+        &.fa-chevron-right {
+          right: 160px;
+
+          &::before {
+            padding-left: 15px;
+          }
+        }
+
+        &:hover {
+          @include prefix(transform, scale(1.2), webkit moz ms o);
+          color: $mango;
+        }
+      }
+
+      .content {
+        display: flex;
+        text-align: center;
+        width: 100%;
+
+        .img-box {
+          @include prefix(transition, 0.3s ease-in-out, webkit moz ms o);
+          display: none;
+          width: 100%;
+
+          &.active {
+            display: block;
+          }
+
+          img {
+            width: 100%;
+          }
+
+          h1 {
+            color: $mango;
+            margin-bottom: 16px;
+          }
+
+          .stars {
+            display: block;
+            margin: 16px auto;
+
+            .fa-star {
+              color: $cadmiumYellow;
+            }
+          }
+
+          p {
+            margin: 16px auto;
+            width: 80%;
+
+            &.via-marketplace {
+              font-weight: 900;
+
+              &.tokopedia {
+                color: #5fb74e;
+              }
+
+              &.shopee {
+                color: #ea501f;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+@import "commons/custom-bootstrap";
+@import "commons/variables";
+
+@font-face {
+  font-family: "Source Sans Pro", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: local("Product Sans"),
+    url("../fonts/SourceSansPro-Regular.ttf") format("truetype")
+      /* Safari, Android, iOS */,
+    url("../fonts/SourceSansPro-Regular.woff") format("woff")
+      /* Pretty Modern Browsers */,
+    url("../fonts/SourceSansPro-Regular.woff2") format("woff2"); /* Super Modern Browsers */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 16pt;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+}
+
+body {
+  overflow-x: hidden;
+
+  &::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $mintCream;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $mango;
+  }
+}
+
+button {
+  border: none;
+  padding: 15px;
+
+  &:hover {
+    box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &:focus {
+    border: 1px solid rgba(123, 198, 183, 0.5);
+    border-radius: 0;
+    outline: none;
+  }
+}
+
+.display-none {
+  display: none;
+}
+
+@import "commons/media";

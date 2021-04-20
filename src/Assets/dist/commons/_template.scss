@@ -1,0 +1,39 @@
+@mixin app {
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  &.blur {
+    filter: blur(5px);
+  }
+}
+
+@mixin overlay {
+  background-color: black;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+@mixin particle {
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+@mixin jar-one {
+  background-image: url("../../img/Jar_1.png");
+  height: 295px;
+  width: 303px;
+}
+
+@mixin jar-two {
+  background-image: url("../../img/Jar_2.png");
+  height: 344px;
+  width: 540px;
+}
+
+@mixin jar-three {
+  background-image: url("../../img/Jar_3.png");
+  height: 367px;
+  width: 275px;
+}
