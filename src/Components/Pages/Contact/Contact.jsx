@@ -55,6 +55,18 @@ export default function Contact() {
         </div>
         <div className="Icon">
           <a
+            href="https://shopee.co.id/sarangmadukusidoarjo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <p>
+              <img src={shopee} alt="Shopee" width="24" height="24" />
+              Shopee Sidoarjo
+            </p>
+          </a>
+        </div>
+        <div className="Icon">
+          <a
             href="https://www.bukalapak.com/u/captaindon"
             target="_blank"
             rel="noopener noreferrer"
